@@ -4,7 +4,8 @@ PIPER script to detect request to an API using the first request line.
 Target tool: Highlighters
 """
 rc = 0
-expr = r'\/(api|service|v|rest)[s]?[0-9]*\/'
+# Match first request line like: GET /api/aclTrafic HTTP/1.1
+expr = r'^[A-Z]+\s\/(api|service|v|rest)[s]?[0-9]*\/'
 for line in sys.stdin:
     if len(line.strip("\r").strip("\n").strip(" ")) == 0:
         continue

@@ -1,6 +1,6 @@
 # Objective
 
-Share all my [PIPER](https://portswigger.net/bappstore/e4e0f6c4f0274754917dcb5f4937bb9e) scripts.
+Centralize and share all my custom scripts to be used with the [PIPER](https://portswigger.net/bappstore/e4e0f6c4f0274754917dcb5f4937bb9e) Burp extension.
 
 # Runtime requirements
 

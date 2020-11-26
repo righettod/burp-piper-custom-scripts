@@ -24,7 +24,21 @@ Each script describe its goal in its header and for which PIPER tools is targete
 PIPER script to ...
 Target tool: [PIPER_TOOL]
 """
-``` 
+```
+
+# Overview of the script behavior
+
+## detect-non-standart-headers
+
+Add a comment to the matching line in the proxy tab.
+
+![detect-non-standart-headers](images/detect-non-standart-headers.png)
+
+## detect-request-to-web-api
+
+Highlight the matching line in the proxy tab.
+
+![detect-request-to-web-api](images/detect-request-to-web-api.png)
 
 # Configuration
 

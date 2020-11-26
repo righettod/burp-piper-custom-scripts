@@ -6,11 +6,11 @@ Target tool: Commentators
 standard_response_headers = [
 "accept-patch",
 "accept-ranges",
-"access-control-allow-origin",
 "access-control-allow-credentials",
 "access-control-allow-headers",
-"access-control-expose-headers",
 "access-control-allow-methods",
+"access-control-allow-origin",
+"access-control-expose-headers",
 "access-control-max-age",
 "age",
 "allow",
@@ -23,8 +23,8 @@ standard_response_headers = [
 "content-length",
 "content-location",
 "content-range",
-"content-transfer-encoding",
 "content-security-policy",
+"content-transfer-encoding",
 "content-type",
 "date",
 "delta-base",
@@ -45,18 +45,18 @@ standard_response_headers = [
 "server",
 "set-cookie",
 "strict-transport-security",
+"tk",
 "trailer",
 "transfer-encoding",
-"tk",
 "upgrade",
 "vary",
 "via",
 "warning",
 "www-authenticate",
-"x-frame-options",
-"x-xss-protection",
 "x-content-type-options",
-"x-permitted-cross-domain-policies"
+"x-frame-options",
+"x-permitted-cross-domain-policies",
+"x-xss-protection"
 ]
 lines = sys.stdin.readlines()
 headers_find = []

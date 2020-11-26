@@ -2,6 +2,8 @@
 
 Centralize and share all my custom scripts to be used with the [PIPER](https://portswigger.net/bappstore/e4e0f6c4f0274754917dcb5f4937bb9e) Burp extension.
 
+[Documentation](https://blog.silentsignal.eu/2020/03/27/unix-style-approach-to-web-application-testing/) of the extension.
+
 # Runtime requirements
 
 > :information_source: No external dependencies.

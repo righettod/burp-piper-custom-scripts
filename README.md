@@ -26,7 +26,7 @@ Target tool: [PIPER_TOOL]
 """
 ```
 
-# Overview of the script behavior
+# Overview of the scripts behavior
 
 ## detect-non-standart-headers
 

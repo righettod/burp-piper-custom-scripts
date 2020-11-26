@@ -17,7 +17,7 @@ Python 3.7.4
 
 # Structure
 
-Each script describe its goal in its header and for which PIPER tools is targeted to be used:
+Each script describes its goal in its header and for which PIPER tools is targeted to be used:
 
 ```text
 """

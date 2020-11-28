@@ -37,6 +37,7 @@ standard_response_headers = [
 "feature-policy",
 "host",
 "im",
+"keep-alive",
 "last-modified",
 "link",
 "location",

@@ -28,6 +28,7 @@ standard_response_headers = [
 "content-security-policy",
 "content-transfer-encoding",
 "content-type",
+"cross-origin-resource-policy",
 "date",
 "delta-base",
 "etag",

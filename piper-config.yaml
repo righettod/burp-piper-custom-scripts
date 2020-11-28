@@ -35,6 +35,18 @@ messageViewers:
   inputMethod: stdin
   name: gron
   filter: {prefix: '{'}
+- prefix: [python, 'E:\CurrentPenTest\BurpSession\piper_custom_scripts\extract-web-api-endpoints.py']
+  inputMethod: stdin
+  requiredInPath: [python]
+  exitCode: [0]
+  name: extract-web-api-endpoints
+  filter:
+    header:
+      header: Content-Type
+      regex:
+        pattern: '[a-z]+\/(javascript|x\-javascript)'
+        flags: [case insensitive]
+  scope: response_only
 menuItems:
 - prefix: [okular]
   inputMethod: filename
@@ -125,3 +137,13 @@ commentators:
   scope: response_only
   overwrite: true
   applyWithListener: true
+highlighters:
+- prefix: [python, 'E:\CurrentPenTest\BurpSession\piper_custom_scripts\detect-request-to-web-api.py']
+  inputMethod: stdin
+  passHeaders: true
+  requiredInPath: [python]
+  exitCode: [1]
+  name: detect-request-to-web-api
+  scope: request_only
+  applyWithListener: true
+  color: orange

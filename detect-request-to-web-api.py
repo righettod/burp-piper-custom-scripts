@@ -2,6 +2,8 @@ import sys, re
 """
 PIPER script to detect request to an API using the first request line.
 Target tool: Highlighters
+Require that HTTP headers been passed
+No filters needed
 """
 rc = 0
 # Match first request line like: GET /api/aclTrafic HTTP/1.1

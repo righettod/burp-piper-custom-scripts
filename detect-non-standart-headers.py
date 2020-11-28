@@ -2,6 +2,8 @@ import sys
 """
 PIPER script to detect if a HTTP response contains non standarts headers.
 Target tool: Commentators
+Require that HTTP headers been passed
+No filters needed
 """
 standard_response_headers = [
 "accept-patch",

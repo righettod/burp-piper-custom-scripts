@@ -56,7 +56,7 @@ Extract interesting information from HTML META tags from a HTTP response. Mainly
 
 ## detect-response-with-errors-disclosure
 
-Detect HTTP response containing a strack trace. Mainly used to quickly identify pages disclosing technical information via stack traces.
+Detect HTTP responses containing a strack trace. Mainly used to quickly identify pages disclosing technical information via stack traces.
 
 ![detect-response-with-errors-disclosure](images/detect-response-with-errors-disclosure.png)
 

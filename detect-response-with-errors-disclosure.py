@@ -1,6 +1,6 @@
 import sys, re
 """
-PIPER script to detect HTTP response containing a strack trace.
+PIPER script to detect HTTP responses containing a strack trace.
 Target tool: Highlighters
 Require that HTTP headers NOT been passed
 No filters needed

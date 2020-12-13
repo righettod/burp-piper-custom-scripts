@@ -54,10 +54,18 @@ Extract interesting information from HTML META tags from a HTTP response. Mainly
 
 ![extract-html-metadatas](images/extract-html-metadatas.png)
 
+## detect-response-with-errors-disclosure
+
+Detect HTTP response containing a strack trace. Mainly used to quickly identify pages disclosing technical information via stack traces.
+
+![detect-response-with-errors-disclosure](images/detect-response-with-errors-disclosure.png)
+
 # Configuration
 
 > :warning: Change the script location path defined in **prefix** field for all custom scripts **before** to import the configuration.
 
 > After the import, do not forget to enable the scripts because they are all disabled by default by the import command.
+
+> For **Highlighters**, the color can be changed before the import by changing the **color** field to one constants supported by PIPER/BURP.
 
 The file [piper-config.yaml](piper-config.yaml) contains the complete configuration that I use for all my custom scripts.

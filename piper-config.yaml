@@ -159,3 +159,12 @@ highlighters:
   scope: request_only
   applyWithListener: true
   color: orange
+- prefix: [python, 'E:\CurrentPenTest\BurpSession\piper_custom_scripts\detect-response-with-errors-disclosure.py']
+  inputMethod: stdin
+  requiredInPath: [python]
+  exitCode: [1]
+  name: detect-response-with-errors-disclosure
+  scope: response_only
+  overwrite: true
+  applyWithListener: true
+  color: cyan

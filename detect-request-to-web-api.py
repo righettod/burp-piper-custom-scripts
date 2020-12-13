@@ -7,7 +7,7 @@ No filters needed
 """
 rc = 0
 # Match first request line like: GET /api/aclTrafic HTTP/1.1
-expr = r'^[A-Z]+\s\/(api|apic|service|v|rest)[s]?[0-9]*\/'
+expr = r'^[A-Z]+\s\/[\w\d\/\-_]*(api|apic|service|rest)[s]?[0-9]*\/'
 for line in sys.stdin:
     if len(line.strip("\r").strip("\n").strip(" ")) == 0:
         continue

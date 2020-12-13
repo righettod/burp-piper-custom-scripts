@@ -47,6 +47,18 @@ messageViewers:
         pattern: '[a-z]+\/(javascript|x\-javascript)'
         flags: [case insensitive]
   scope: response_only
+- prefix: [python, 'E:\CurrentPenTest\BurpSession\piper_custom_scripts\extract-html-metadatas.py']
+  inputMethod: stdin
+  requiredInPath: [python]
+  exitCode: [0]
+  name: extract-html-metadatas
+  filter:
+    header:
+      header: Content-Type
+      regex:
+        pattern: '[a-z]+\/x?(html)'
+        flags: [case insensitive]
+  scope: response_only
 menuItems:
 - prefix: [okular]
   inputMethod: filename

@@ -48,6 +48,12 @@ Extract all API endpoints (*and URL like because it is hard to really identify i
 
 ![extract-web-api-endpoints](images/extract-web-api-endpoints.png)
 
+## extract-html-metadatas
+
+Extract interesting information from HTML META tags from a HTTP response. Mainly used to quickly identify which products/tools was used to build the site/application.
+
+![extract-html-metadatas](images/extract-html-metadatas.png)
+
 # Configuration
 
 > :warning: Change the script location path defined in **prefix** field for all custom scripts **before** to import the configuration.

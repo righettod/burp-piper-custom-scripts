@@ -36,7 +36,16 @@ exprs.append(r'(\.php\son\sline\s\d+)')
 ## Based on search on Google for examples
 exprs.append(r'(ODBC\sDriver\s\d+\sfor\sSQL\sServer)')
 # Extract the whole response body
-content = "".join(sys.stdin)
+# Remove all comments (single line and multiline) to prevent false positive
+single_line_comment_regex = r'^[\s\t]*\/\/.*$'
+multi_line_comment_regex = r'^[\s\t]*\/\*.*?\*\/'
+multi_line_comment_regex_additional_line = r'^[\s\t]*\*.*'
+content = ""
+for line in sys.stdin:
+    if (re.search(single_line_comment_regex, line, re.IGNORECASE) is None 
+    and re.search(multi_line_comment_regex, line, re.IGNORECASE|re.MULTILINE) is None 
+    and re.search(multi_line_comment_regex_additional_line, line, re.IGNORECASE|re.MULTILINE) is None):
+        content += line
 # Search for the presence of patterns in the response body
 for expr in exprs:
     if re.search(expr, content, re.IGNORECASE|re.MULTILINE) is not None:

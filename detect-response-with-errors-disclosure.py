@@ -40,7 +40,7 @@ content = "".join(sys.stdin)
 # Search for the presence of patterns in the response body
 for expr in exprs:
     if re.search(expr, content, re.IGNORECASE|re.MULTILINE) is not None:
-        print(expr)
+        # print(expr)
 		# Return code to match in the config of PIPER
         rc = 1
         # Exit on first found

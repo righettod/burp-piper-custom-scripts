@@ -4,7 +4,7 @@ name: code_static_analysis_and_os_compatibility_tests
 # See https://github.com/actions/virtual-environments/blob/main/images/win/Windows2019-Readme.md
 # See https://github.com/actions/virtual-environments/blob/main/images/macos/macos-10.15-Readme.md
 on:
-   workflow_dispatch:
+  workflow_dispatch:
   push:
     branches: [ master ]
   pull_request:

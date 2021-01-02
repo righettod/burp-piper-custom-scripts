@@ -1,0 +1,18 @@
+HTTP/1.1 200 OK
+Server: nginx/1.15.9
+Date: Sat, 02 Jan 2021 10:48:09 GMT
+Content-Type: application/javascript
+Connection: close
+Access-Control-Allow-Origin: https://oauth.tools/
+Access-Control-Allow-Credentials: true
+Cache-Control: max-age=31536000
+Last-Modified: Fri, 11 Dec 2020 11:14:47 GMT
+ETag: W/"+cp65smsYQE+cp7kJgKftA--gzip"
+Accept-Ranges: bytes
+Vary: Accept-Encoding, User-Agent
+Expires: Sun, 02 Jan 2022 10:48:09 GMT
+Pragma: public
+Cache-Control: public
+Content-Length: 2405257
+
+function test(){}

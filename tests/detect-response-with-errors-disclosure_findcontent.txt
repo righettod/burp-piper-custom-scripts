@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sat, 02 Jan 2021 17:24:11 GMT
+Content-Type: application/json
+Content-Length: 21
+Connection: close
+Access-Control-Allow-Origin: https://repl.it
+Vary: Origin
+Strict-Transport-Security: max-age=15724800; includeSubDomains
+
+{
+  "error": "java.lang.ArithmeticException: / by zero at Main.main(Main.java:10) at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
+}

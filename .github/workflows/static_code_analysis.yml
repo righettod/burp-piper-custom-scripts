@@ -1,25 +1,40 @@
-name: Static Code Analysis
+name: code_static_analysis_and_os_compatibility_tests
+# See https://docs.github.com/en/free-pro-team@latest/actions/reference/specifications-for-github-hosted-runners
+# See https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu1804-README.md
+# See https://github.com/actions/virtual-environments/blob/main/images/win/Windows2019-Readme.md
+# See https://github.com/actions/virtual-environments/blob/main/images/macos/macos-10.15-Readme.md
 on:
-  workflow_dispatch:
+   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        python-version: [ '3.7', '3.8' ]    
+    name: Test with Python ${{ matrix.python-version }} on ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python
+    - name: Set up Python ${{ matrix.python-version }} on ${{ matrix.os }}
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
-    - name: Install Flake8 and Bandit
+        python-version: ${{ matrix.python-version }}
+        architecture: x64
+    - name: Install dependencies for Python ${{ matrix.python-version }} on ${{ matrix.os }}
       run: |
         python -m pip install --upgrade pip
         pip install flake8 bandit
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Run code analysis
+    - name: Run complete audit suites with Python ${{ matrix.python-version }} on ${{ matrix.os }} (Linux OS only)
+      if: ${{ matrix.os == 'ubuntu-latest' }}
       run: |
         chmod +x ci/code_static_analysis.sh
         bash ci/code_static_analysis.sh
+    - name: Run unit tests suites with Python ${{ matrix.python-version }} on ${{ matrix.os }} (All OS except Linux)
+      if: ${{ matrix.os != 'ubuntu-latest' }}
+      run: |
+        pytest

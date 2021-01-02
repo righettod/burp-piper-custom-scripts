@@ -1,0 +1,200 @@
+HTTP/1.1 200 OK
+Content-Type: application/javascript
+Content-Length: 5784
+Connection: close
+Vary: Accept-Encoding
+Date: Sat, 02 Jan 2021 17:48:31 GMT
+Last-Modified: Wed, 16 Dec 2020 16:28:34 GMT
+ETag: "5d5508cab42ff4028ec66c13e3a09cdc"
+x-amz-version-id: H2k0nr74MqCpFafRlH3PDuv420yZ0qrR
+Accept-Ranges: bytes
+Server: AmazonS3
+X-Cache: Miss from cloudfront
+Via: 1.1 3ffec0ecfde687fb371812ad42f5cfc2.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: AMS1-C1
+X-Amz-Cf-Id: pCR0iYiwZD59N0CsqmTBjMxn7SCsSZaKaY7eevvMZoIcKwOz5Y89Vg==
+
+function getPatientFormData() {
+    var formData = new FormData($('form#patient_form')[0])
+    return {
+        lastname: formData.get('patient-lastname'),
+        firstname: formData.get('patient-firstname'),
+        country: formData.get('patient-country-code'),
+        mobile: formData.get('patient-mobile'),
+        dob: formData.get('patient-dob'),
+        matricule: formData.get('patient-matricule'),
+    }
+}
+
+function register(token) {
+    var formData = getPatientFormData()
+    formData['token'] = token
+
+    $.ajax({
+        url: '/api/v2/register',
+        type: 'POST',
+        data: JSON.stringify(formData),
+        dataType: 'json',
+        async: true,
+        cache: false,
+        contentType: 'application/json',
+        processData: false,
+        success: function (result) {
+            console.log('register success')
+            $('body').addClass('has-otp')
+        },
+        error: function (response) {
+            var code = JSON.parse(response.responseText).code
+
+            if (code === '102') {
+                $('#patient--error--box').attr('hidden', true)
+                $('#patient--info--box').removeAttr('hidden')
+            } else {
+                var lang = getLanguage()
+                $('#patient--info--box').attr('hidden', true)
+                $('#patient--error--box').removeAttr('hidden')
+                $('#patient--error--message').text(LNS_BOOKING_MESSAGES[lang].errors[code])
+            }
+
+            $('#booking_form_validation').prop('disabled', false)
+        }
+    });
+}
+
+function handlePatientForm(event) {
+    event.preventDefault()
+
+    $('#cancelled-appointment').attr('hidden', true)
+
+    var submitButton = $('#booking_form_validation')
+    submitButton.prop('disabled', true)
+
+    var formData = getPatientFormData()
+    $('#otp-phone-number').text(formData.mobile)
+
+    grecaptcha.ready(function () {
+        grecaptcha.execute(GOOGLE_RECAPTCHA_KEY, {action: 'submit'}).then(function (token) {
+            register(token)
+        })
+    })
+}
+
+function resendOTP(token) {
+    var formData = getPatientFormData()
+
+    $.ajax({
+        url: '/api/v2/otp/resend',
+        type: 'POST',
+        data: JSON.stringify({country: formData.country, mobile: formData.mobile, token: token}),
+        dataType: 'json',
+        async: true,
+        cache: false,
+        contentType: 'application/json',
+        processData: false,
+        success: function () {
+            $('#otp--error--box').attr('hidden', 'true')
+            $('#otp--error--message').empty()
+        },
+        error: function (response) {
+            var code = JSON.parse(response.responseText).code
+            var lang = getLanguage()
+            $('#otp--error--box').removeAttr('hidden')
+            $('#otp--error--message').text(LNS_BOOKING_MESSAGES[lang].errors[code])
+        }
+    });
+}
+
+function handleResendOTP() {
+    grecaptcha.ready(function () {
+        grecaptcha.execute(GOOGLE_RECAPTCHA_KEY, {action: 'submit'}).then(function (token) {
+            resendOTP(token)
+        });
+    });
+}
+
+function validateOtp(token, otp) {
+    var submitButton = $('#otp_form_verification')
+    submitButton.prop('disabled', true)
+
+    var patientFormData = getPatientFormData()
+
+    $.ajax({
+        url: '/api/v2/otp/validate',
+        type: 'POST',
+        data: JSON.stringify({
+            country: patientFormData.country,
+            mobile: patientFormData.mobile,
+            otp: otp,
+            token: token
+        }),
+        dataType: 'json',
+        async: true,
+        cache: false,
+        contentType: 'application/json',
+        processData: false,
+        success: function () {
+            $('#patient_form').attr('hidden', 'true')
+            $('body').removeClass('has-otp')
+            window.location.href = '/' + getLanguage() + '/appointment.html';
+        },
+        error: function (response) {
+            var code = JSON.parse(response.responseText).code
+            console.log(JSON.parse(response.responseText))
+            var lang = getLanguage()
+            $('#otp--error--box').removeAttr('hidden')
+            $('#otp--error--message').text(LNS_BOOKING_MESSAGES[lang].errors[code])
+            submitButton.prop('disabled', false)
+        }
+    });
+}
+
+function handleOtpValidationForm(event) {
+    event.preventDefault()
+
+    var otpFormData = new FormData($('form#otp_form')[0])
+    var otp = otpFormData.get('otp')
+
+    if (otp.length !== 6) {
+        var lang = getLanguage()
+        $('#otp--error--box').removeAttr('hidden')
+        $('#otp--error--message').text(LNS_BOOKING_MESSAGES[lang].errors['1000'])
+        return
+    }
+
+    grecaptcha.ready(function () {
+        grecaptcha.execute(GOOGLE_RECAPTCHA_KEY, {action: 'submit'}).then(function (token) {
+            validateOtp(token, otp)
+        });
+    });
+}
+
+function redirectLanguage() {
+    var selectedLanguage = $(this).find('option:selected').val()
+    window.location.href = '/' + selectedLanguage + '/index.html';
+}
+
+$(document).ready(function () {
+    var redirect = new URLSearchParams(window.location.search).get('redirect');
+    if (redirect === 'cancelled') {
+        $('#cancelled-appointment').removeAttr('hidden')
+    }
+
+    // Forms
+    $('form#patient_form').submit(handlePatientForm)
+    $('form#otp_form').submit(handleOtpValidationForm)
+    $('#resendOtp').click(handleResendOTP)
+
+    $('#lang-selector').change(redirectLanguage)
+
+    $('#updatePhone').click(function () {
+        $('#booking_form_validation').prop('disabled', false)
+        $('body').removeClass('has-otp')
+        $('#otp--error--box').attr('hidden', true)
+        $('#patient-mobile').focus();
+        $('#patient-mobile-field')[0].scrollIntoView();
+    })
+
+    if (new Date() > new Date('2021-01-02')) {
+        $('#holiday-information').hide()
+    }
+})

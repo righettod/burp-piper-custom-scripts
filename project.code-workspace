@@ -11,6 +11,7 @@
 		"python.linting.flake8Enabled": true,
 		"python.linting.flake8Args": ["--ignore=E501,E122,W605"],
 		"python.linting.banditEnabled": true,
-		"python.linting.banditArgs": ["--recursive"]
+		"python.linting.banditArgs": ["--recursive", "--exclude ./tests"],
+		"python.testing.autoTestDiscoverOnSaveEnabled": true
 	}
 }

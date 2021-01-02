@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx/1.14.2
+Date: Sat, 02 Jan 2021 17:34:07 GMT
+Content-Type: application/json
+Content-Length: 876
+Connection: close
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c; Expires=Fri, 02-Apr-2021 17:34:07 GMT; Max-Age=7776000; HttpOnly; Path=/
+
+{"jsonrpc": "2.0", "id": 441311674}

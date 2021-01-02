@@ -1,0 +1,27 @@
+HTTP/1.1 200 OK
+Content-Type: application/javascript
+Content-Length: 5784
+Connection: close
+Vary: Accept-Encoding
+Date: Sat, 02 Jan 2021 17:48:31 GMT
+Last-Modified: Wed, 16 Dec 2020 16:28:34 GMT
+ETag: "5d5508cab42ff4028ec66c13e3a09cdc"
+x-amz-version-id: H2k0nr74MqCpFafRlH3PDuv420yZ0qrR
+Accept-Ranges: bytes
+Server: AmazonS3
+X-Cache: Miss from cloudfront
+Via: 1.1 3ffec0ecfde687fb371812ad42f5cfc2.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: AMS1-C1
+X-Amz-Cf-Id: pCR0iYiwZD59N0CsqmTBjMxn7SCsSZaKaY7eevvMZoIcKwOz5Y89Vg==
+
+function getPatientFormData() {
+    var formData = new FormData($('form#patient_form')[0])
+    return {
+        lastname: formData.get('patient-lastname'),
+        firstname: formData.get('patient-firstname'),
+        country: formData.get('patient-country-code'),
+        mobile: formData.get('patient-mobile'),
+        dob: formData.get('patient-dob'),
+        matricule: formData.get('patient-matricule'),
+    }
+}

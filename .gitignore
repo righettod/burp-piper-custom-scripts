@@ -1,2 +1,4 @@
 # Ignore test materials
-*.txt
+test.txt
+.pytest_cache/
+tests/__pycache__/

@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Server: nginx/1.14.2
+Date: Sat, 02 Jan 2021 17:34:00 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 21292
+Connection: close
+X-Frame-Options: DENY
+Set-Cookie: session_id=7526b6349392aa0b4147fa099721759f51aac7d1; Expires=Fri, 02-Apr-2021 17:34:00 GMT; Max-Age=7776000; HttpOnly; Path=/
+   
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/> 
+<meta property="og:type" content="website"/>

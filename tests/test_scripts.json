@@ -1,0 +1,74 @@
+{
+    "detect-non-standart-headers": {
+        "findcontent": {
+            "type": "Commentators",
+            "marker": "2 non standard response headers found: ['x-test2', 'x-test']",
+            "expected-rc": 0
+        },
+        "findnothing": {
+            "type": "Commentators",
+            "marker": "",
+            "expected-rc": 0
+        }
+    },
+    "detect-request-to-web-api": {
+        "findcontent": {
+            "type": "Highlighters",
+            "marker": "",
+            "expected-rc": 1
+        },
+        "findnothing": {
+            "type": "Highlighters",
+            "marker": "",
+            "expected-rc": 0
+        }
+    },
+    "detect-response-with-errors-disclosure": {
+        "findcontent": {
+            "type": "Highlighters",
+            "marker": "",
+            "expected-rc": 1
+        },
+        "findnothing": {
+            "type": "Highlighters",
+            "marker": "",
+            "expected-rc": 0
+        }
+    },
+    "extract-html-metadatas": {
+        "findcontent": {
+            "type": "Message viewers",
+            "marker": "Generator: Odoo",
+            "expected-rc": 0
+        },
+        "findnothing": {
+            "type": "Message viewers",
+            "marker": "No metadata found.",
+            "expected-rc": 0
+        }
+    },
+    "extract-jwt-tokens": {
+        "findcontent": {
+            "type": "Message viewers",
+            "marker": "\"loggedInAs\": \"admin\"",
+            "expected-rc": 0
+        },
+        "findnothing": {
+            "type": "Message viewers",
+            "marker": "No token found.",
+            "expected-rc": 0
+        }
+    },
+    "extract-web-api-endpoints": {
+        "findcontent": {
+            "type": "Message viewers",
+            "marker": "/api/v2/otp/validate",
+            "expected-rc": 0
+        },
+        "findnothing": {
+            "type": "Message viewers",
+            "marker": "No endpoint found.",
+            "expected-rc": 0
+        }
+    }
+}

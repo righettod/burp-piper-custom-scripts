@@ -1,0 +1,14 @@
+POST /register HTTP/1.1
+Host: rdv.lns.lu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Content-Length: 582
+Origin: https://rdv.lns.lu
+DNT: 1
+Connection: close
+Referer: https://rdv.lns.lu/en/index.html
+Cookie: language=en

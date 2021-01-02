@@ -60,6 +60,14 @@ Detect HTTP responses containing a strack trace. Mainly used to quickly identify
 
 ![detect-response-with-errors-disclosure](images/detect-response-with-errors-disclosure.png)
 
+## extract-jwt-tokens
+
+> :dart: This script was created in order to avoid the need to use another extension or the decoder to just see the content of the token.
+
+Extract and pretty-display all [JWT](https://jwt.io/introduction) tokens present in a HTTP response.
+
+![extract-jwt-tokens](images/extract-jwt-tokens.png)
+
 # Configuration
 
 > :warning: Change the script location path defined in **prefix** field for all custom scripts **before** to import the configuration.

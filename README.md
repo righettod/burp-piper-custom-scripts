@@ -15,6 +15,16 @@ PS> python --version
 Python 3.7.4
 ```
 
+# Embedding of this collection of scripts into the PIPER source repository
+
+This [topic](https://github.com/silentsignal/burp-piper/issues/8) is pending on the PIPER's author side. Once ready, this repository will be merged.
+
+# IDE
+
+[Visual Studio Code](https://code.visualstudio.com/) with [Python extension provided by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-python.python) is used to develop the scripts.
+
+[Project workspace file](project.code-workspace) has been configured to trigger the installation of required code analysis modules and analysis profile is defined in the workspace settings area.
+
 # Structure
 
 Each script describes its goal in its header, for which PIPER tools is targeted to be used and instruction regarding if HTTP headers must be passed as well as filter to define:

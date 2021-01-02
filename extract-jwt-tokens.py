@@ -1,10 +1,16 @@
-import sys, re, urllib.parse, base64, json, binascii
+import sys
+import re
+import urllib.parse
+import base64
+import json
+import binascii
 """
 PIPER script to extract and pretty-display all JWT tokens present in an HTTP response.
 Target tool: Message viewers
 Require that HTTP headers been passed
 No filters needed
 """
+
 
 # Utility function handling Base64 incorrect padding issue
 def decode(encoded_data):
@@ -25,12 +31,14 @@ def decode(encoded_data):
                 decoded_data = None
     return decoded_data
 
+
 # Utility function handling the pretty print of the data
 def pretty_print(jwt_data):
     content = "Data cannot be printed due to decoding issue."
     if jwt_data is not None:
         content = json.dumps(json.loads(jwt_data), indent=2, sort_keys=True)
-    return content 
+    return content
+
 
 # Match pattern representing a JWT token structure like the following:
 # eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ==

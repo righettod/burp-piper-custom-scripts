@@ -1,4 +1,5 @@
-import sys, re
+import sys
+import re
 """
 PIPER script to detect request to an API using the first request line.
 Target tool: Highlighters
@@ -13,7 +14,7 @@ for line in sys.stdin:
         continue
     # Read only the first line
     if re.search(expr, line, re.IGNORECASE) is not None:
-		# Return code to match in the config of PIPER
+        # Return code to match in the config of PIPER
         rc = 1
     break
 exit(rc)

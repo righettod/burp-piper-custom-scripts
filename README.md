@@ -64,7 +64,7 @@ Detect HTTP responses containing a strack trace. Mainly used to quickly identify
 
 > :dart: This script was created in order to avoid the need to use another [extensions](https://portswigger.net/bappstore) or the [decoder](https://portswigger.net/burp/documentation/desktop/tools/decoder) to just see the content of the token.
 
-Extract and pretty-display all [JWT](https://jwt.io/introduction) tokens present in a HTTP response.
+Extract and pretty-display all [JWT](https://jwt.io/introduction) tokens present in an HTTP response.
 
 ![extract-jwt-tokens](images/extract-jwt-tokens.png)
 

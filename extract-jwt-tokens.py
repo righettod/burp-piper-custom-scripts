@@ -1,6 +1,6 @@
 import sys, re, urllib.parse, base64, json, binascii
 """
-PIPER script to extract and pretty-display all JWT tokens present in a HTTP response.
+PIPER script to extract and pretty-display all JWT tokens present in an HTTP response.
 Target tool: Message viewers
 Require that HTTP headers been passed
 No filters needed

@@ -1,4 +1,4 @@
-![Static Code Analysis](https://github.com/righettod/burp-piper-custom-scripts/workflows/Static%20Code%20Analysis/badge.svg?branch=main)
+![code_static_analysis_and_os_compatibility_tests](https://github.com/righettod/burp-piper-custom-scripts/workflows/code_static_analysis_and_os_compatibility_tests/badge.svg?branch=main)
 
 # Objective
 
@@ -16,6 +16,10 @@ Python >= **3.7** needed and in `PATH`.
 PS> python --version
 Python 3.7.4
 ```
+
+# Compatibility tests
+
+This [GitHub action workfow](.github/workflows/static_code_analysis.yml) validate that all scripts are compatible with Python `3.7`, `3.8`, `3.9` on `Windows`, `Mac` and `Linux` OS.
 
 # Embedding of this collection of scripts into the PIPER source repository
 

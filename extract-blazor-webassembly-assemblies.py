@@ -19,7 +19,7 @@ if "resources" in metadata and "assembly" in metadata["resources"] and len(metad
     print(f"{len(assemblies)} assemblies found.")
     print("\nUse the following script to download them, update the variable 'BaseUrl' with the target domain (like 'https://myapp.com'):\n")
     # Generate the download script for the current OS:
-    # Windows => PowerShell / Others => Bash
+    # Windows => PowerShell / Other => Bash
     script = ""
     if sys.platform.startswith("win"):
         script = "$BaseUrl=\"[REPLACE_ME]\"\n"

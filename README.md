@@ -90,7 +90,7 @@ Extract the collection of assemblies from a HTTP response describing the assembl
 
 A script to download all the assemblies, is generated in the same time:
 * For Windows is PowerShell.
-* For Others is Bash.
+* For other is Bash.
 
 ![extract-blazor-webassembly-assemblies](images/extract-blazor-webassembly-assemblies.png)
 

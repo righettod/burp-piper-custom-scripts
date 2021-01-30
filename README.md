@@ -84,7 +84,7 @@ Extract and pretty-display all [JWT](https://jwt.io/introduction) tokens present
 
 ![extract-jwt-tokens](images/extract-jwt-tokens.png)
 
-# extract-blazor-webassembly-assemblies
+## extract-blazor-webassembly-assemblies
 
 Extract the collection of assemblies from a HTTP response describing the assemblies used by a [Blazor WebAssembly](https://blazor-university.com/overview/blazor-hosting-models/) application.
 

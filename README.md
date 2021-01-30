@@ -84,6 +84,16 @@ Extract and pretty-display all [JWT](https://jwt.io/introduction) tokens present
 
 ![extract-jwt-tokens](images/extract-jwt-tokens.png)
 
+# extract-blazor-webassembly-assemblies
+
+Extract the collection of assemblies from a HTTP response describing the assemblies used by a [Blazor WebAssembly](https://blazor-university.com/overview/blazor-hosting-models/) application.
+
+A script to download all the assemblies, is generated in the same time:
+* For Windows is PowerShell.
+* For Others is Bash.
+
+![extract-blazor-webassembly-assemblies](images/extract-blazor-webassembly-assemblies.png)
+
 # Configuration
 
 > :warning: Change the script location path defined in **prefix** field for all custom scripts **before** to import the configuration.

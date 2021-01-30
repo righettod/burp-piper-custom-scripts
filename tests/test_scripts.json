@@ -70,5 +70,17 @@
             "marker": "No endpoint found.",
             "expected-rc": 0
         }
+    },
+    "extract-blazor-webassembly-assemblies":{
+        "findcontent": {
+            "type": "Message viewers",
+            "marker": "5 assemblies found.",
+            "expected-rc": 0
+        },
+        "findnothing": {
+            "type": "Message viewers",
+            "marker": "No assembly found.",
+            "expected-rc": 0
+        }      
     }
 }

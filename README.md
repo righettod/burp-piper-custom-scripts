@@ -86,6 +86,8 @@ Extract and pretty-display all [JWT](https://jwt.io/introduction) tokens present
 
 ## extract-blazor-webassembly-assemblies
 
+> :dart: Just copy/paste the script section in a `ps1` / `sh` file and execute it to retrieve all the assemblies.
+
 Extract the collection of assemblies from a HTTP response describing the assemblies used by a [Blazor WebAssembly](https://blazor-university.com/overview/blazor-hosting-models/) application.
 
 A script to download all the assemblies, is generated in the same time:

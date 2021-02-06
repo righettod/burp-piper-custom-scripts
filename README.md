@@ -31,6 +31,8 @@ This [topic](https://github.com/silentsignal/burp-piper/issues/8) is pending on 
 
 [Project workspace file](project.code-workspace) has been configured to trigger the installation of required code analysis modules and analysis profile is defined in the workspace settings area.
 
+[Debug configuration](.vscode/launch.json) was provided to debug a python script. 
+
 # Structure
 
 Each script describes its goal in its header, for which PIPER tools is targeted to be used and instruction regarding if HTTP headers must be passed as well as filter to define:

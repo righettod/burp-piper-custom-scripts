@@ -18,6 +18,8 @@ No filters needed
 #
 # Constants
 NUM_100NS_INTERVALS_SINCE_UUID_EPOCH = 122192928000000000
+
+
 # Utility function
 def extract_uuid_infos(target_uuid):
     infos = None
@@ -46,7 +48,8 @@ def extract_uuid_infos(target_uuid):
     except Exception:
         infos = None
     return infos
-#
+
+
 # Extract the whole response body
 content = "".join(sys.stdin)
 # Extract all UUID from the response body

@@ -96,6 +96,19 @@ A script to download all the assemblies, is generated in the same time:
 
 ![extract-blazor-webassembly-assemblies](images/extract-blazor-webassembly-assemblies.png)
 
+## extract-uuid-infos
+
+> :clap: Inspired from this [project](https://github.com/silentsignal/burp-uuid) so, credits goes first to it!
+
+Extract the collection of [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) present in a HTTP response and then, depending on the version of UUID, extract the infos for each of them.
+
+![extract-uuid-infos](images/extract-uuid-infos.png)
+
+Sources:
+* [How secure are your Universally Unique IDentifiers?](https://versprite.com/blog/universally-unique-identifiers/)
+* [Not so unique snowflakes](https://blog.silentsignal.eu/2017/02/17/not-so-unique-snowflakes/).
+* [UUID versions explained](https://www.uuidtools.com/uuid-versions-explained).
+
 # Configuration
 
 > :warning: Change the script location path defined in **prefix** field for all custom scripts **before** to import the configuration.

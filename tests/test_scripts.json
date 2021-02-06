@@ -71,7 +71,7 @@
             "expected-rc": 0
         }
     },
-    "extract-blazor-webassembly-assemblies":{
+    "extract-blazor-webassembly-assemblies": {
         "findcontent": {
             "type": "Message viewers",
             "marker": "5 assemblies found.",
@@ -81,6 +81,18 @@
             "type": "Message viewers",
             "marker": "No assembly found.",
             "expected-rc": 0
-        }      
+        }
+    },
+    "extract-uuid-infos": {
+        "findcontent": {
+            "type": "Message viewers",
+            "marker": "4 UUID found.",
+            "expected-rc": 0
+        },
+        "findnothing": {
+            "type": "Message viewers",
+            "marker": "No UUID found.",
+            "expected-rc": 0
+        }
     }
 }

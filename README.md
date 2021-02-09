@@ -110,6 +110,7 @@ Sources:
 * [How secure are your Universally Unique IDentifiers?](https://versprite.com/blog/universally-unique-identifiers/)
 * [Not so unique snowflakes](https://blog.silentsignal.eu/2017/02/17/not-so-unique-snowflakes/).
 * [UUID versions explained](https://www.uuidtools.com/uuid-versions-explained).
+* [POC "Sandwich Attack: A New Way Of Brute Forcing UUIDs"](https://gist.github.com/righettod/45d59e1d8eb83fe351a9e9aafb37f91f).
 
 # Configuration
 

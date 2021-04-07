@@ -94,5 +94,17 @@
             "marker": "No UUID found.",
             "expected-rc": 0
         }
+    },
+    "extract-spa-unsafe-patterns": {
+        "findcontent": {
+            "type": "Message viewers",
+            "marker": "11 patterns found.",
+            "expected-rc": 0
+        },
+        "findnothing": {
+            "type": "Message viewers",
+            "marker": "0 patterns found.",
+            "expected-rc": 0
+        }
     }
 }

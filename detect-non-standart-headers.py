@@ -18,6 +18,7 @@ standard_response_headers = [
 "allow",
 "alt-svc",
 "cache-control",
+"clear-site-data",
 "connection",
 "content-disposition",
 "content-encoding",

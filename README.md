@@ -112,6 +112,14 @@ Sources:
 * [UUID versions explained](https://www.uuidtools.com/uuid-versions-explained).
 * [POC "Sandwich Attack: A New Way Of Brute Forcing UUIDs"](https://gist.github.com/righettod/45d59e1d8eb83fe351a9e9aafb37f91f).
 
+## extract-spa-unsafe-patterns
+
+Extract all occurences of unsafe patterns used in a [Single Page Application](https://en.wikipedia.org/wiki/Single-page_application) (SPA) main JS bundle file.
+
+The objective is to quickly spot if framework built-in security features are disabled or if unsafe code patterns are used in order to identify potential attack vectors on the client side.
+
+![extract-spa-unsafe-patterns](images/extract-spa-unsafe-patterns.png)
+
 # Configuration
 
 > :warning: Change the script location path defined in **prefix** field for all custom scripts **before** to import the configuration.
@@ -121,3 +129,4 @@ Sources:
 > For **Highlighters**, the color can be changed before the import by changing the **color** field to one constants supported by PIPER/BURP.
 
 The file [piper-config.yaml](piper-config.yaml) contains the complete configuration that I use for all my custom scripts.
+

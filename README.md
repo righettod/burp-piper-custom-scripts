@@ -120,6 +120,17 @@ The objective is to quickly spot if framework built-in security features are dis
 
 ![extract-spa-unsafe-patterns](images/extract-spa-unsafe-patterns.png)
 
+
+## extract-spa-low-hanging-fruits
+
+Extract elements from a [Single Page Application](https://en.wikipedia.org/wiki/Single-page_application) (SPA) html files and main JS bundles that can be interesting from security point of view.
+
+The objective is to quickly spot interesting low-level issues than can used as foundation to discover more critical issues.
+
+![extract-spa-low-hanging-fruits](images/extract-spa-low-hanging-fruits.png)
+
+![extract-spa-low-hanging-fruits](images/extract-spa-low-hanging-fruits2.png)
+
 # Configuration
 
 > :warning: Change the script location path defined in **prefix** field for all custom scripts **before** to import the configuration.

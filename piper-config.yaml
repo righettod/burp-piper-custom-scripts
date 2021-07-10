@@ -94,6 +94,16 @@ messageViewers:
       header: Content-Type
       regex: {pattern: '[a-z]+\/(javascript|x\-javascript)'}
   scope: response_only
+- prefix: [python, 'E:\CurrentPenTest\BurpSession\burp-piper-custom-scripts\extract-spa-low-hanging-fruits.py']
+  inputMethod: stdin
+  requiredInPath: [python]
+  exitCode: [0]
+  name: extract-spa-low-hanging-fruits
+  filter:
+    header:
+      header: Content-Type
+      regex: {pattern: '[a-z]+\/(javascript|x\-javascript|html)'}
+  scope: response_only
 menuItems:
 - prefix: [okular]
   inputMethod: filename

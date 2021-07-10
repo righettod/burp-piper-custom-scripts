@@ -106,5 +106,17 @@
             "marker": "0 patterns found.",
             "expected-rc": 0
         }
+    },
+    "extract-spa-low-hanging-fruits": {
+        "findcontent": {
+            "type": "Message viewers",
+            "marker": "OAuth/OIDC initialization flow keywords (5):",
+            "expected-rc": 0
+        },
+        "findnothing": {
+            "type": "Message viewers",
+            "marker": "No keyword found.",
+            "expected-rc": 0
+        }
     }
 }

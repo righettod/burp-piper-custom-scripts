@@ -10,13 +10,17 @@ Filters needed via matching of the case insensitive regex for the header Content
 # https://pragmaticwebsecurity.com/articles/spasecurity/angular-xss.html
 # https://pragmaticwebsecurity.com/articles/spasecurity/react-xss-part2.html
 # https://pragmaticwebsecurity.com/articles/spasecurity/react-xss-part3.html
+# https://vuejs.org/v2/guide/security.html#Injecting-HTML
 #
 # Dictionary of patterns by framework:
 #   KEY is the framework name in uppercase
 #   VALUE is a array of regular expressions matching unsage patterns to extract
 patterns = {}
-patterns["ANGULAR"] = [r'bypassSecurity[A-Za-z0-9]+', r'[A-Za-z0-9]+\.renderer2\.[A-Za-z0-9]+']
-patterns["REACT"] = [r'dangerouslySetInnerHTML\s?=\s?[\{\}_\-\.\"\'\s:\w\d]+', r'[A-Za-z0-9]+\.findDOMNode\(', r'React\.createRef\(']
+patterns["ANGULAR"] = [r'bypassSecurity[A-Za-z0-9]+',
+                       r'[A-Za-z0-9]+\.renderer2\.[A-Za-z0-9]+']
+patterns["REACT"] = [
+    r'dangerouslySetInnerHTML\s?=\s?[\{\}_\-\.\"\'\s:\w\d]+', r'[A-Za-z0-9]+\.findDOMNode\(', r'React\.createRef\(']
+patterns["VUE.JS"] = [r'innerHTML\s?:\s?[\w\d\.\"\']+']
 # Extract the whole response body
 content = "".join(sys.stdin)
 # Apply extraction
@@ -29,7 +33,8 @@ for framework in patterns:
         if len(data) > 0:
             # Remove duplicate and sort the results
             result = []
-            [result.append(f"  {item}") for item in data if f"  {item}" not in result]
+            [result.append(f"  {item}")
+             for item in data if f"  {item}" not in result]
             count += len(result)
             result.sort()
             print("\n".join(result))

@@ -98,7 +98,7 @@
     "extract-spa-unsafe-patterns": {
         "findcontent": {
             "type": "Message viewers",
-            "marker": "11 patterns found.",
+            "marker": "12 patterns found.",
             "expected-rc": 0
         },
         "findnothing": {

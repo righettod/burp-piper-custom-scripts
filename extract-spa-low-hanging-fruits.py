@@ -9,6 +9,7 @@ Filters needed via matching of the case insensitive regex for the header Content
 # Sources:
 # https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity
 # https://courses.pragmaticwebsecurity.com/courses/introduction-to-oauth-2-0-and-openid-connect
+# https://github.com/righettod/toolbox-pentest-web/blob/master/docs/README.md#leverage-map-files-to-recover-the-spa-original-code
 #
 # Extract the whole response body
 content = "".join(sys.stdin)
@@ -35,3 +36,13 @@ if len(identifiers) > 0:
     print("\n".join(identifiers))
 else:
     print("No keyword found.")
+# Search for JS bundle source mapping file
+# Example: "//# sourceMappingURL=main.7017cdf9.chunk.js.map"
+pattern = r'sourceMappingURL\s?=\s?([\w\d\.\-_]+)'
+map_file = re.findall(pattern, content, re.MULTILINE)
+print(f"\nJS bundle source mapping file ({len(map_file)}):")
+if len(map_file) > 0:
+    map_file.sort()
+    print("\n".join(map_file))
+else:
+    print("No source mapping file found.")

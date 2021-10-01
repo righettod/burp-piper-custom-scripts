@@ -35,7 +35,7 @@ messageViewers:
   inputMethod: stdin
   name: gron
   filter: {prefix: '{'}
-- prefix: [python, 'E:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\extract-web-api-endpoints.py']
+- prefix: [python, 'C:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\extract-web-api-endpoints.py']
   inputMethod: stdin
   requiredInPath: [python]
   exitCode: [0]
@@ -47,7 +47,7 @@ messageViewers:
         pattern: '[a-z]+\/(javascript|x\-javascript)'
         flags: [case insensitive]
   scope: response_only
-- prefix: [python, 'E:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\extract-html-metadatas.py']
+- prefix: [python, 'C:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\extract-html-metadatas.py']
   inputMethod: stdin
   requiredInPath: [python]
   exitCode: [0]
@@ -59,14 +59,14 @@ messageViewers:
         pattern: '[a-z]+\/x?(html)'
         flags: [case insensitive]
   scope: response_only
-- prefix: [python, 'E:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\extract-jwt-tokens.py']
+- prefix: [python, 'C:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\extract-jwt-tokens.py']
   inputMethod: stdin
   passHeaders: true
   requiredInPath: [python]
   exitCode: [0]
   name: extract-jwt-tokens
   scope: response_only
-- prefix: [python, 'E:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\extract-blazor-webassembly-assemblies.py']
+- prefix: [python, 'C:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\extract-blazor-webassembly-assemblies.py']
   inputMethod: stdin
   requiredInPath: [python]
   exitCode: [0]
@@ -78,13 +78,13 @@ messageViewers:
         pattern: application/json
         flags: [case insensitive]
   scope: response_only
-- prefix: [python, 'E:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\extract-uuid-infos.py']
+- prefix: [python, 'C:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\extract-uuid-infos.py']
   inputMethod: stdin
   requiredInPath: [python]
   exitCode: [0]
   name: extract-uuid-infos
   scope: response_only
-- prefix: [python, 'E:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\extract-spa-unsafe-patterns.py']
+- prefix: [python, 'C:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\extract-spa-unsafe-patterns.py']
   inputMethod: stdin
   requiredInPath: [python]
   exitCode: [0]
@@ -94,7 +94,7 @@ messageViewers:
       header: Content-Type
       regex: {pattern: '[a-z]+\/(javascript|x\-javascript)'}
   scope: response_only
-- prefix: [python, 'E:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\extract-spa-low-hanging-fruits.py']
+- prefix: [python, 'C:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\extract-spa-low-hanging-fruits.py']
   inputMethod: stdin
   requiredInPath: [python]
   exitCode: [0]
@@ -185,7 +185,7 @@ commentators:
 - prefix: [sha256sum]
   inputMethod: stdin
   name: SHA-256
-- prefix: [python, 'E:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\detect-non-standart-headers.py']
+- prefix: [python, 'C:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\detect-non-standart-headers.py']
   inputMethod: stdin
   passHeaders: true
   requiredInPath: [python]
@@ -195,7 +195,7 @@ commentators:
   overwrite: true
   applyWithListener: true
 highlighters:
-- prefix: [python, 'E:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\detect-request-to-web-api.py']
+- prefix: [python, 'C:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\detect-request-to-web-api.py']
   inputMethod: stdin
   passHeaders: true
   requiredInPath: [python]
@@ -204,7 +204,7 @@ highlighters:
   scope: request_only
   applyWithListener: true
   color: orange
-- prefix: [python, 'E:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\detect-response-with-errors-disclosure.py']
+- prefix: [python, 'C:\OneDrive\OneDrive - Excellium Services S.A\Workstation\CurrentPenTest\BurpSession\piper_custom_scripts\detect-response-with-errors-disclosure.py']
   inputMethod: stdin
   requiredInPath: [python]
   exitCode: [1]

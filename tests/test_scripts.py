@@ -1,5 +1,5 @@
 import json
-import subprocess
+import subprocess  # nosec B404
 """
 Test suites in charge of testing all the scripts based on the expectation defined in file "test_scripts.json"
 for the 2 test cases by scripts:
@@ -21,7 +21,7 @@ def __get_scripts():
 
 
 def __run_test(test_data_file_name, script_name_without_extension):
-    p = subprocess.Popen(["python", f"{script_name_without_extension}.py"], stdin=open(f"tests/{test_data_file_name}"), stdout=subprocess.PIPE)
+    p = subprocess.Popen(["python", f"{script_name_without_extension}.py"], stdin=open(f"tests/{test_data_file_name}"), stdout=subprocess.PIPE)  # nosec B603,B607
     p.wait()
     return (p.returncode, p.stdout.read().decode("utf-8"))
 
@@ -30,11 +30,11 @@ def __check_result(props, rc, content):
     if props["type"] == "Commentators" or props["type"] == "Message viewers":
         marker = props["marker"]
         expected_rc = props["expected-rc"]
-        assert rc == expected_rc, f"RC is not equals to {expected_rc} (RC: {rc})"
-        assert marker in content, f"Marker '{marker}' not found in '{content}'"
+        assert rc == expected_rc, f"RC is not equals to {expected_rc} (RC: {rc})"  # nosec B101
+        assert marker in content, f"Marker '{marker}' not found in '{content}'"  # nosec B101
     elif props["type"] == "Highlighters":
         expected_rc = props["expected-rc"]
-        assert rc == expected_rc, f"RC is not equals to {expected_rc} (RC: {rc})"
+        assert rc == expected_rc, f"RC is not equals to {expected_rc} (RC: {rc})"  # nosec B101
 
 
 def test_scripts():

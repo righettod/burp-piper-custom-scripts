@@ -8,7 +8,7 @@ Centralize and share all my custom scripts to be used with the [PIPER](https://p
 
 # Runtime requirements
 
-> :information_source: No external dependencies needed.
+> :information_source: Reduced to the minimal ones needed, see file [requirements.txt](requirements.txt) for details.
 
 Python >= **3.9** needed and in `PATH`.
 

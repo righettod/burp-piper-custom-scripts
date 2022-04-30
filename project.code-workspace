@@ -7,9 +7,9 @@
 		"python.linting.lintOnSave": true,
 		"python.linting.pylintEnabled": false,
 		"python.linting.flake8Enabled": true,
-		"python.linting.flake8Args": ["--ignore=E501,E122,W605,B314,B405"],
+		"python.linting.flake8Args": ["--ignore=E501,E122,W605"],
 		"python.linting.banditEnabled": true,
-		"python.linting.banditArgs": ["--recursive", "--exclude ./tests"],
+		"python.linting.banditArgs": ["--recursive", "--exclude ./tests", "--skip=B314,B405"],
 		"python.testing.autoTestDiscoverOnSaveEnabled": true
 	}
 }

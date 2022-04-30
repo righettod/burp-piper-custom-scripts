@@ -118,5 +118,17 @@
             "marker": "No keyword found.",
             "expected-rc": 0
         }
+    },
+    "extract-saml-response-infos": {
+        "findcontent": {
+            "type": "Message viewers",
+            "marker": "1 SAML response found.",
+            "expected-rc": 0
+        },
+        "findnothing": {
+            "type": "Message viewers",
+            "marker": "No SAML response found.",
+            "expected-rc": 0
+        }
     }
 }

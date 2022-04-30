@@ -10,16 +10,16 @@ Centralize and share all my custom scripts to be used with the [PIPER](https://p
 
 > :information_source: No external dependencies needed.
 
-Python >= **3.7** needed and in `PATH`.
+Python >= **3.9** needed and in `PATH`.
 
 ```powershell
 PS> python --version
-Python 3.7.4
+Python 3.9.7
 ```
 
 # Compatibility tests
 
-This [GitHub action workfow](.github/workflows/static_code_analysis.yml) validate that all scripts are compatible with Python `3.7`, `3.8`, `3.9` on `Windows`, `Mac` and `Linux` OS.
+This [GitHub action workfow](.github/workflows/static_code_analysis.yml) validate that all scripts are compatible with Python `3.9`, `3.10` on `Windows`, `Mac` and `Linux` OS.
 
 # Embedding of this collection of scripts into the PIPER source repository
 
@@ -31,7 +31,7 @@ This [topic](https://github.com/silentsignal/burp-piper/issues/8) is pending on 
 
 [Project workspace file](project.code-workspace) has been configured to trigger the installation of required code analysis modules and analysis profile is defined in the workspace settings area.
 
-[Debug configuration](.vscode/launch.json) was provided to debug a python script. 
+[Debug configuration](.vscode/launch.json) was provided to debug a python script.
 
 # Structure
 
@@ -93,6 +93,7 @@ Extract and pretty-display all [JWT](https://jwt.io/introduction) tokens present
 Extract the collection of assemblies from a HTTP response describing the assemblies used by a [Blazor WebAssembly](https://blazor-university.com/overview/blazor-hosting-models/) application.
 
 A script to download all the assemblies, is generated in the same time:
+
 * For Windows is PowerShell.
 * For other is Bash.
 
@@ -107,6 +108,7 @@ Extract the collection of [UUID](https://en.wikipedia.org/wiki/Universally_uniqu
 ![extract-uuid-infos](images/extract-uuid-infos.png)
 
 Sources:
+
 * [How secure are your Universally Unique IDentifiers?](https://versprite.com/blog/universally-unique-identifiers/)
 * [Not so unique snowflakes](https://blog.silentsignal.eu/2017/02/17/not-so-unique-snowflakes/).
 * [UUID versions explained](https://www.uuidtools.com/uuid-versions-explained).
@@ -120,7 +122,6 @@ The objective is to quickly spot if framework built-in security features are dis
 
 ![extract-spa-unsafe-patterns](images/extract-spa-unsafe-patterns.png)
 
-
 ## extract-spa-low-hanging-fruits
 
 Extract elements from a [Single Page Application](https://en.wikipedia.org/wiki/Single-page_application) (SPA) html files and main JS bundles that can be interesting from security point of view.
@@ -131,6 +132,14 @@ The objective is to quickly spot interesting low-level issues than can used as f
 
 ![extract-spa-low-hanging-fruits](images/extract-spa-low-hanging-fruits2.png)
 
+## extract-saml-response-infos
+
+> :dart: This script was created in order to avoid the need to use another [extensions](https://portswigger.net/bappstore) or the [decoder](https://portswigger.net/burp/documentation/desktop/tools/decoder) to just see the content of the SAML response.
+
+Extract and pretty-display information from a [SAML response](https://auth0.com/blog/how-saml-authentication-works/) present in an HTTP response.
+
+![extract-saml-response-infos](images/extract-saml-response-infos.png)
+
 # Configuration
 
 > :warning: Change the script location path defined in **prefix** field for all custom scripts **before** to import the configuration.
@@ -140,4 +149,3 @@ The objective is to quickly spot interesting low-level issues than can used as f
 > For **Highlighters**, the color can be changed before the import by changing the **color** field to one constants supported by PIPER/BURP.
 
 The file [piper-config.yaml](piper-config.yaml) contains the complete configuration that I use for all my custom scripts.
-

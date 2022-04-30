@@ -7,7 +7,7 @@ import binascii
 """
 PIPER script to extract and pretty-display all JWT tokens present in an HTTP response.
 Target tool: Message viewers
-Require that HTTP headers been passed
+Require that HTTP headers NOT been passed
 No filters needed
 """
 

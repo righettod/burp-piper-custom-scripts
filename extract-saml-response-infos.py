@@ -2,7 +2,7 @@ import sys
 import base64
 import urllib.parse
 import re
-import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ET  # nosec B405
 from cryptography import x509
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes
@@ -25,7 +25,7 @@ def extract_nodes(xpath_expr, saml_content):
     if "<!DOCTYPE" in re.sub(r'([\s|\n|\t|\r]*)', "", saml_content.upper()):
         print("[!] DTD/External Entity detected so skip processing...")
     else:
-        root = ET.fromstring(saml_content)
+        root = ET.fromstring(saml_content)  # nosec B314
         nodes = root.findall(xpath_expr, SAML_NAMESPACES)
     return nodes
 

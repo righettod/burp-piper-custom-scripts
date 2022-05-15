@@ -140,6 +140,14 @@ Extract and pretty-display information from a [SAML response](https://auth0.com/
 
 ![extract-saml-response-infos](images/extract-saml-response-infos.png)
 
+## extract-saml-request-infos
+
+> :dart: This script was created in order to avoid the need to use another [extensions](https://portswigger.net/bappstore) or the [decoder](https://portswigger.net/burp/documentation/desktop/tools/decoder) to just see the content of the SAML request.
+
+Extract and pretty-display information from a [SAML request](https://auth0.com/blog/how-saml-authentication-works/) present in an HTTP request.
+
+![extract-saml-request-infos](images/extract-saml-request-infos.png)
+
 # Configuration
 
 > :warning: Change the script location path defined in **prefix** field for all custom scripts **before** to import the configuration.

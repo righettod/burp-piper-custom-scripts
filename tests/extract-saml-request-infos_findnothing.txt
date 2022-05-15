@@ -1,0 +1,9 @@
+OPTIONS /saml/auth?SAMLReques=rZNB
+Host: righettod.eu
+Access-Control-Request-Method: GET
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.0 Safari/537.36
+Access-Control-Request-Headers: turbolinks-referrer
+Accept: */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+Connection: close

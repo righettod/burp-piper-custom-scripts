@@ -1,0 +1,10 @@
+OPTIONS /saml/auth?SAMLRequest=rZNBa%2BMwEIX%2Fim86KZad2klEHDAJhUB3CWm7h16KKo2pQJa8Gnmb%2FfcrO03IoZtS6EkgvXlv9Gm0RNGajtd9eLV7%2BN0DhqRGBB%2B0s2tnsW%2FB34P%2FoyU87u8q8hpCx9O0C4YuxBQAZhkFxsoc1MvE6BfZezNBx%2BcsHaxTefQgySZaaysG37OLVh39zOloI2KDJNluKvJcTqesXBSMQsMUvcmzORXllNFCzZtiMbtRsimjFLGHrcUgbKhIzvKcsoJmxUNW8GzGi8UTSX6Bx7GdfMJIcmiNRT6kVaT3ljuBGrkVLSAPkt%2FXP%2B54FHJxwnNZ0l2v6bwLTjpDVstBzcfu%2FOqrMAcKy%2FTSYXl8v58xcbvZOaPl36Q2xr2tPYgAFQm%2Bj%2FBvnW9F%2BH%2BP2SQbd7SizSjl0AptaqU8IJL0lPM%2BIqDGgYnzEeAQkrVrO%2BE1DijhIGQ4XfNStTYR3B6a1VW2kstBF7d3cXlzXu0iOpAx8sELi53z4Z3Ah%2Bbfl3s1Jb2C43x6%2BalW%2FwA%3D HTTP/1.1
+Host: righettod.eu
+Access-Control-Request-Method: GET
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.0 Safari/537.36
+Access-Control-Request-Headers: turbolinks-referrer
+Accept: */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+Connection: close
+

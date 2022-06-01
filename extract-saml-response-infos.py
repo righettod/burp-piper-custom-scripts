@@ -62,17 +62,21 @@ def extract_algorithms_used(saml_content):
 
 def extract_certificate_infos(saml_content):
     certs = []
-    nodes = extract_nodes(".//ds:X509Certificate", saml_content)
+    nodes = extract_nodes(f".//ds:X509Certificate", saml_content)
     for node in nodes:
         cert_base64 = node.text
         pem_data = base64.b64decode(cert_base64.encode(DEFAULT_ENCODING))
-        certif = x509.load_der_x509_certificate(pem_data, default_backend())
-        certs.append({"Fingerprint": certif.fingerprint(hashes.SHA256()).hex(),
-                      "Version": certif.version,
-                      "Issuer": certif.issuer,
-                      "Subject": certif.subject,
-                      "NotValidBefore": certif.not_valid_before,
-                      "NotValidAfter": certif.not_valid_after})
+        try:
+            certif = x509.load_der_x509_certificate(pem_data, default_backend())
+            certs.append({"Fingerprint": certif.fingerprint(hashes.SHA256()).hex(),
+                          "Version": certif.version,
+                          "Issuer": certif.issuer,
+                          "Subject": certif.subject,
+                          "NotValidBefore": certif.not_valid_before,
+                          "NotValidAfter": certif.not_valid_after})
+        except Exception as e:
+            certs.clear()
+            certs.append({"Error": str(e)})
     return certs
 
 

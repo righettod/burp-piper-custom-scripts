@@ -62,7 +62,7 @@ def extract_algorithms_used(saml_content):
 
 def extract_certificate_infos(saml_content):
     certs = []
-    nodes = extract_nodes(f".//ds:X509Certificate", saml_content)
+    nodes = extract_nodes(".//ds:X509Certificate", saml_content)
     for node in nodes:
         cert_base64 = node.text
         pem_data = base64.b64decode(cert_base64.encode(DEFAULT_ENCODING))

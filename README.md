@@ -1,3 +1,5 @@
+> 🚨 Project was stopped to move to [Burp BCheck](https://portswigger.net/burp/documentation/scanner/bchecks) build-in feature.
+
 ![code_static_analysis_and_os_compatibility_tests](https://github.com/righettod/burp-piper-custom-scripts/workflows/code_static_analysis_and_os_compatibility_tests/badge.svg?branch=main)
 
 # Objective
